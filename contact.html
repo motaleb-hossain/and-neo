@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="keywords" content="Site keywords here"/>
+    <meta name="description" content="#"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Site Title -->
+    <title>And Neo</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body>
+    <!-- Header Area -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-3 col-6">
+                        <div class="neo__logo">
+                            <a href="index.html"><img src="assets/img/logo.png" alt="#"/></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-9 col-6">
+                        <div class="neo-right">
+                            <ul class="neo-right__list">
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="philosophy.html">PHILOSOPHY</a></li>
+                                <li><a href="dx.html">DX</a></li>
+                                <li><a href="company.html">COMPANY</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                                <li><a href="#">JP</a> | <a href="#">EN</a></li>
+                            </ul>
+                        </div>
+
+                        <a class="hamburger">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Contact Area -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact__inner">
+                <h2 class="display-3">CONTACT</h2>
+
+                <div class="row align-items-end">
+                    <div class="col-md-5">
+                        <div class="page__left">
+                            <img src="assets/img/animated-img.png" alt="" class="img-fluid">
+                            <h2 class="display-4">CONTACT</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="page__tag">お問い合わせ。。。。。。。。。</h3>
+                        <p class="m-0">ご返答までにお時間を頂く場合がございます。あらかじめ、ご了承ください。</p>
+                        <p class="m-0">また、お問い合わせの内容によってお電話でご連絡させていただく場合がございます。</p>
+
+                        <div class="contact-form">
+                            <form action="{{ route('contact') }}" method="post">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="type" class="field-label">お問い合せ種類</label>
+                                    <select name="type" id="type" required>
+                                        <option value="">選択してください</option>
+                                        <option value="開発用地について">開発用地について</option>
+                                        <option value="コラボレーションのご相談">コラボレーションのご相談</option>
+                                        <option value="採用について">採用について</option>
+                                        <option value="取材について">取材について</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company_name" class="field-label">所属会社名</label>
+                                    <input type="text" id="company_name" placeholder="合同会社　アンドネオ" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="field-label">氏名</label>
+                                    <input type="text" id="name" placeholder="山田太郎" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="furigana" class="field-label">氏名（フリガナ）</label>
+                                    <input type="text" id="furigana" placeholder="ヤマダタロウ" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="field-label">メールアドレス</label>
+                                    <input type="text" id="email" placeholder="hello@trunk-base.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="field-label">電話番号</label>
+                                    <input type="text" id="phone" placeholder="00-0000-0000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" class="field-label">メッセージ</label>
+                                    <textarea id="message" placeholder="メッセージをご入力ください" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn">CHECK</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Area -->
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <ul class="neo-nav__list">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="philosophy.html">PHILOSOPHY</a></li>
+                    <li><a href="dx.html">DX</a></li>
+                    <li><a href="company.html">COMPANY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="#">JP</a> | <a href="#">EN</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <div class="cursor"></div>
+
+    <!-- AndNeo JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
